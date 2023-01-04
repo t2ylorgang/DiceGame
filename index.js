@@ -5,6 +5,8 @@ function getRandomInt(max) {
 
 // Here I am setting a variable to the output of the random integer function (1-6) for further use.
 var randomNumber1 = getRandomInt(6);
+// Here I am getting a different random number for the second die using the same function above.
+var randomNumber2 = getRandomInt(6);
 
 // These 3 lines of code select the images from the DOM and store them as seperate variables from the array that is returned using querySelectorAll.
 const diceImages = document.getElementsByTagName("img")
@@ -28,6 +30,26 @@ function getRandomDice1() {
     }
 }
 
+// This function changes the src link based on randomNumber2 for the diceTwoImg.
+function getRandomDice2() {
+    if (randomNumber2 === 1) {
+        diceTwoImg.src = "images/dice1.png";
+    } else if (randomNumber2 === 2) {
+        diceTwoImg.src = "images/dice2.png"
+    } else if (randomNumber2 === 3) {
+        diceTwoImg.src = "images/dice3.png"
+    } else if (randomNumber2 === 4) {
+        diceTwoImg.src = "images/dice4.png"
+    } else if (randomNumber2 === 5) {
+        diceTwoImg.src = "images/dice5.png"
+    } else {
+        diceTwoImg.src = "images/dice6.png"
+    }
+}
+
+// Here I am invoking the functions to actually make them work when the page is refreshed.
 getRandomDice1();
+getRandomDice2();
 
 console.log(randomNumber1);
+console.log(randomNumber2);
