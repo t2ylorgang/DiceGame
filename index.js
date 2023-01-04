@@ -66,6 +66,3 @@ function whoWon() {
 
 // Here I am invoking the whoWon() function so it works when the page is refreshed.
 whoWon();
-
-console.log(randomNumber1);
-console.log(randomNumber2);
