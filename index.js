@@ -51,5 +51,21 @@ function getRandomDice2() {
 getRandomDice1();
 getRandomDice2();
 
+// Here I am setting the variable changeText to the H1 in the DOM for use in the below function.
+var changeText = document.querySelector("h1")
+// Here I am changing the innerText of the H1 element based on which randomNumber is higher. I also set a condition for a draw.
+function whoWon() {
+    if (randomNumber1 > randomNumber2) {
+        changeText.innerText = "Player 1 Wins!"
+    } else if (randomNumber1 === randomNumber2) {
+        changeText.innerText = "It's a Draw!"
+    } else {
+        changeText.innerText = "Player 2 Wins!"
+    }
+}
+
+// Here I am invoking the whoWon() function so it works when the page is refreshed.
+whoWon();
+
 console.log(randomNumber1);
 console.log(randomNumber2);
